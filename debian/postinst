@@ -3,7 +3,10 @@
 set -e
 case "$1" in
     configure)
-       ln -s /usr/lib/json_index/json_index /usr/bin/
+
+       dst=/usr/bin/json_index
+       rm -f $dst
+       ln -s /usr/lib/json_index/json_index $dst
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
 
