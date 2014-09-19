@@ -1,0 +1,19 @@
+{
+  "name": "json_index",
+  "version": "0.0.0",
+  "description": "Json index file manifest generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.ivsdev.net:utils/json_index.git"
+  },
+  "author": "François Leurent <fleurent@ivsweb.com>",
+  "license": "IVS",
+  "dependencies": {
+    "nyks": "~0.1.3",
+    "glob": "~4.0.5"
+  }
+}
