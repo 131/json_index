@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <files>
+   <file src="//json_index"   dst="usr/lib/json_index/"/>
+   <file src="//node_modules" dst="usr/lib/json_index/"/>
+  </files>
+</package>

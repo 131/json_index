@@ -1,0 +1,13 @@
+Source: json-index
+Section: unknown
+Priority: extra
+Maintainer: Francois Leurent <fleurent@ivsweb.com>
+Build-Depends: debhelper (>= 9), dh-exec
+Standards-Version: 3.9.3
+Homepage: http://packages.ivsweb.com
+
+Package: json-index
+Architecture: any
+Depends: nodejs 
+Description: JSON index manifest generator
+

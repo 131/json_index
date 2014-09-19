@@ -1,0 +1,19 @@
+#!/bin/bash
+# postinst script for json-index
+set -e
+case "$1" in
+    configure)
+       ln -s /usr/lib/json_index/json_index /usr/bin/
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+    *)
+        echo "postinst called with unknown argument" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
