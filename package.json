@@ -13,7 +13,7 @@
   "author": "François Leurent <fleurent@ivsweb.com>",
   "license": "IVS",
   "dependencies": {
-    "nyks": "~0.1.3",
+    "nyks": "~0.1.6",
     "glob": "~4.0.5"
   }
 }
