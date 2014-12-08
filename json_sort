@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?
+
+$infile = $argv[1];
+
+$contents = file_get_contents($infile);
+
+function sort_recursive($f){
+  if(!is_array($f))
+    return $f;
+  ksort($f);
+
+  foreach($f as &$v)
+    $v = sort_recursive($v);
+  return $f;
+}
+
+$data = json_decode($contents, true);
+$data = sort_recursive($data);
+
+$data = json_encode($data, JSON_PRETTY_PRINT);
+
+die($data);
+
+

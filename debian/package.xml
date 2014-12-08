@@ -3,5 +3,6 @@
   <files>
    <file src="//json_index"   dst="usr/lib/json_index/"/>
    <file src="//node_modules" dst="usr/lib/json_index/"/>
+   <file src="//json_sort" dst="usr/bin/"/>
   </files>
 </package>
