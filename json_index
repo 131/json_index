@@ -35,7 +35,7 @@ if(false) {
   process.stdout.write(JSON.stringify(files ));
 } else {
   index.fetch(cwd, start_dir, excludes, remap, function(error, files){
-    process.stdout.write(JSON.stringify(files ));
+    process.stdout.write(JSON.stringify(files, null, 2 ));
   });
 }
 
