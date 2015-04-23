@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
+
+
 var index = require('./lib/index.js')
+
 
 
 function escapeRegExp(str) {
@@ -22,10 +25,19 @@ process.argv.each(function(arg, k){
   else args.push(arg);
 });
 
+
 var cwd       = args[2] || process.cwd();
 var start_dir = args[3] || "/" ;
 
 
-var files = index.fetchSync(cwd, start_dir, excludes, remap);
+if(false) {
+  var files = index.fetchSync(cwd, start_dir, excludes, remap);
+  process.stdout.write(JSON.stringify(files ));
+} else {
+  index.fetch(cwd, start_dir, excludes, remap, function(error, files){
+    process.stdout.write(JSON.stringify(files ));
+  });
+}
 
-process.stdout.write(JSON.stringify(files ));
+
+

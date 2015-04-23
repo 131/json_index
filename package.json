@@ -1,6 +1,6 @@
 {
   "name": "json_index",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Json index file manifest generator",
   "main": "lib/index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "author": "François Leurent <fleurent@ivsweb.com>",
   "license": "IVS",
   "dependencies": {
-    "nyks": "*",
-    "glob": "~4.0.5"
+    "async": "^0.9.0",
+    "glob": "~4.0.5",
+    "nyks": "*"
   }
 }
