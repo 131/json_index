@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+var startsWith = require('mout/string/startsWith');
+var stripStart = require('nyks/string/stripStart');
+
 
 
 var index = require('./lib/index.js')
@@ -13,11 +16,11 @@ function escapeRegExp(str) {
 
 var excludes = [], args = [], remap = {};
 process.argv.each(function(arg, k){
-  if(arg.startsWith('--exclude='))
-    excludes.push(new RegExp(escapeRegExp(arg.stripStart('--exclude='))));
+  if(startsWith(arg, '--exclude='))
+    excludes.push(new RegExp(escapeRegExp(stripStart(arg, '--exclude='))));
 
-  if(arg.startsWith('--remap://')) {
-    var map = arg.stripStart('--remap://').split('=');
+  if(startsWith(arg, '--remap://')) {
+    var map = stripStart(arg, '--remap://').split('=');
     remap[map[0]] = map[1];
   }
 
