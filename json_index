@@ -9,15 +9,12 @@ var index = require('./lib/index.js')
 
 
 
-function escapeRegExp(str) {
-  return str.replace(/[\/]/g, "\\$&");
-}
 
 
 var excludes = [], args = [], remap = {};
 process.argv.each(function(arg, k){
   if(startsWith(arg, '--exclude='))
-    excludes.push(new RegExp(escapeRegExp(stripStart(arg, '--exclude='))));
+    excludes.push(stripStart(arg, '--exclude='));
 
   if(startsWith(arg, '--remap://')) {
     var map = stripStart(arg, '--remap://').split('=');
