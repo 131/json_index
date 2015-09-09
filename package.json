@@ -1,6 +1,6 @@
 {
   "name": "json_index",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Json index file manifest generator",
   "main": "lib/index.js",
   "scripts": {
